@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Detect</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- Browser Name -->
+    <h1>Chrome</h1>
+
+
+    <script>
+        let userAgent = window.navigator.userAgent;
+        let browser;
+
+        if (userAgent.match(/chrome|chromium/i)) {
+            browser = "Chrome";
+            console.log(userAgent)
+        } else if (userAgent.match(/firefox/i)) {
+            browser = "Firefox";
+
+        } else if (userAgent.match(/opr/i)) {
+            browser = "Opera";
+
+        } else if (userAgent.match(/safari/i)) {
+            browser = "Safari";
+
+        } else {
+            alert("Change Your Browser")
+        }
+
+        let title = document.querySelector("h1");
+
+        title.innerText = browser;
+    </script>
+</body>
+
+</html>
